@@ -43,7 +43,8 @@ $ chmod a+x path/to/bypo.rb
 
 and change the `.rb` extension to `.sh`.
 
-
 ### ToDo
 
-* Small GUI.
+* Validating
+* Enter paths in console as first step and save them
+* Small GUI
