@@ -4,8 +4,8 @@ require 'fileutils'
 
 class Bypo
 
-  LOCAL_PATH = 'C:\xampp\htdocs'
-  REMOTE_PATH = 'C:\Users\Windows\Desktop\Dropbox\repos'
+  LOCAL_PATH = '/Applications/pyxl/dev/php/sideprojects'
+  REMOTE_PATH = '/Users/pyxl/Dropbox/repos'
   UPSTREAM_NAME = 'dropbox'
 
   def initialize(name)
@@ -16,7 +16,7 @@ class Bypo
       create_files_and_commit
       create_remote_repo
 
-      puts "\nRepository for `#{@name}` successfully created!\n\n"
+      print "\nRepository for `#{@name}` successfully created!\n\n"
     end
   end
 
@@ -35,8 +35,7 @@ class Bypo
 
     # Connect local repository to remote and push local master branch to remote.
     Dir.chdir "#{LOCAL_PATH}/#{@name}" do
-      `git remote add #{UPSTREAM_NAME} #{REMOTE_PATH}/#{@name}.git`
-      `git push -u #{UPSTREAM_NAME} master`
+      `git remote add #{UPSTREAM_NAME} #{REMOTE_PATH}/#{@name}.git && git push -u #{UPSTREAM_NAME} master`
     end
   end
 
@@ -47,8 +46,7 @@ class Bypo
         f.write ".idea\n/vendor\n/node_modules\n.Thumbs.db\n.DS_Store"
       end
 
-      `git add .`
-      `git commit -m "initial commit"`
+      `git add . && git commit -m "initial commit"`
     end
   end
 
