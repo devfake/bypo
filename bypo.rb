@@ -10,6 +10,7 @@ class Bypo
 
   def initialize(name)
     @name = name
+    @name.gsub! " ", "-"
 
     if ! folder_exists?
       create_local_repo
