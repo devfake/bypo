@@ -45,6 +45,7 @@ and change the `.rb` extension to `.sh`.
 
 ### ToDo
 
+* Rewrite code
 * Validating
 * Enter paths in console as first step and save them
 * Small GUI
