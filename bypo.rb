@@ -42,13 +42,12 @@ class Bypo
   def create_files_and_commit
     Dir.chdir("#{LOCAL_PATH}/#{@name}") do
       File.open('.gitignore', 'w+') do |f|
-        f.write ".idea\n/vendor\n/node_modules\n.Thumbs.db\n.DS_Store"
+        f.write(".idea\n/vendor\n/node_modules\n.Thumbs.db\n.DS_Store")
       end
 
       `git add . && git commit -m "initial commit"`
     end
   end
-
 
   # Check if folder on local and remote exists.
   def folder_exists?
