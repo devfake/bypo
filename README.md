@@ -48,4 +48,5 @@ and change the `.rb` extension to `.sh`.
 * Rewrite code
 * Validating
 * Enter paths in console as first step and save them
-* Small GUI
+* Smart GUI
+* Two modes: Clone repo and Create new repo
